@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Guard from './components/Guard';
+import AddMusic from './components/music/AddMusic';
+import GetMusicList from './components/music/GetMusicList';
+import GetOneSong from './components/music/GetOneSong';
 
 function App() {
   return (
@@ -21,9 +24,9 @@ function App() {
                 */
               }
             </Route>
-
-
-
+            <Route path='/addmusic' element={<AddMusic />} />
+            <Route path='/getmusiclist' element={<GetMusicList />} />
+            <Route path="/getonesong/:id" element={<GetOneSong />} />
           </Routes>
         </BrowserRouter>
       </>
